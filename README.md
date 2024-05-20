@@ -4,7 +4,7 @@ The book breaks down the "layers" in modern computer networking, starting at the
 
 "An internet focus" pg 8
 
-## Chapter 1
+## Chapter 1: Computer Network and the Internet
 
 The internet is a specific network that is in fact a network of networks. The book bases its exploration of networks on the internet.
 Note, "servers" typically refers to "machines" connected to the internet that store and transmit information, such as web pages or email messages, to "hosts" or "end systems", such as desktop PCs or laptops.
@@ -17,7 +17,23 @@ Data is segmented with header bytes added to each segment. This results in "pack
 
 End systems or "hosts" access the internet through **Internet Service Providers (ISP)**, which are contained networks or more packet switches and communication links. There are residential ISPs, cellular data ISPs, etc. Each ISP network is managed independently and runs the IP protocol.
 
-page 31 - bottom - 1.1.2
+**Services**
+
+The internet could be described as an infrastructure that provides services to applications. Internet applications run on "end systems"/"hosts." They do not run in the packet switches in the network core. So they run on servers and "hosts." Think client web app and REST API HTTP web server. Packet switches facilitate the exchange of data only.
+
+The internet depends on protocols, which fundamentally define specific actions an internet service can take in response to a specific message or "event" it has received. All activity in the Internet that involves two or more communicating remote entities is governed by a protocol. These protocols can be implemented in hardware or sofware. For example, the physical flow of bits between network "cards" and other hardware devices in governed by protocols (i.e standards for interfacing). Protocols in routers determine a packet's path from source to destination. 
+
+**The network edge**
+
+The "edge" here refers to the end systems or hosts in the network. So for the internet that might laptops, smartphones, web servers and email servers. These systems sit at the edge of the internet. Whereas the "network core" refers more to the infrastructure by which data moves on the internet, so we look at switching and routing in networks.
+
+End systems are also referred to as hosts because they host (that is, run) application programs such as a Web browser program, a Web server program (a software package that implements certain network protocols, like http, for interfacing with clients), an e-mail client program, or an e-mail server program. Today, most "servers" reside in data centers.
+
+q: What is the difference between a modem and a router in a home network? A modem brings the internet to your home, has a public IP address and interfaces with a WAN (wide area network). A router brings the internet to your individual devices within your home network, assigns local IP addresses for each connected device and operates a LAN network (local area network). The modem is the router's gateway to the "larger" network. The modem is responsible for interfacing with wider network maintained by your ISP (internet service provider). [SOURCE](https://www.xfinity.com/hub/internet/modem-vs-router)
+
+[PG 39 - bottom - Access Networks]
+
+....
 
 ## Approach 
 
