@@ -31,7 +31,20 @@ End systems are also referred to as hosts because they host (that is, run) appli
 
 q: What is the difference between a modem and a router in a home network? A modem brings the internet to your home, has a public IP address and interfaces with a WAN (wide area network). A router brings the internet to your individual devices within your home network, assigns local IP addresses for each connected device and operates a LAN network (local area network). The modem is the router's gateway to the "larger" network. The modem is responsible for interfacing with wider network maintained by your ISP (internet service provider). [SOURCE](https://www.xfinity.com/hub/internet/modem-vs-router)
 
-[PG 39 - bottom - Access Networks]
+How do homes connect to the internet? Usually with a Digital Subscriber Line (DSL) or cable. A DSL line is usually supplied by a local telephone company that provides wired local phone access. Thus a customer hooks up a DSL modem to a DSL telephone line (copper wire..) to echange data. 
+
+The residential telephone line carries both data and traditional telephone signals simulataneously, which are encoded at different frequencies. The DSL modem translates digital data into high-frequeny tones for transmission over telephone wires. These "tones" are translated back into "digital data" by a DSLAM in the telcom where your data interfaces with the wider network.
+
+The residential telephone line carries both data and traditional telephone signals simultaneously, which are encoded at different frequencies:
+A high-speed downstream channel, in the 50 kHz to 1 MHz band
+A medium-speed upstream channel, in the 4 kHz to 50 kHz band
+An ordinary two-way telephone channel, in the 0 to 4 kHz band
+
+Question: What does it mean to carry data at "a certain frequency"? What is "frequency" exactly?
+
+DSL makes use of existing local telephone infrastructure, and cable internet access makes use of cable television's existing cable infrastructure. Pg 41 image. In a optical fiber network, optical signals are converted to electrical signals, which can be interpreted as digital data (bits).
+
+[PG 45 - top - Access Networks]
 
 ....
 
