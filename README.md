@@ -42,9 +42,19 @@ An ordinary two-way telephone channel, in the 0 to 4 kHz band
 
 Question: What does it mean to carry data at "a certain frequency"? What is "frequency" exactly?
 
-DSL makes use of existing local telephone infrastructure, and cable internet access makes use of cable television's existing cable infrastructure. Pg 41 image. In a optical fiber network, optical signals are converted to electrical signals, which can be interpreted as digital data (bits).
+DSL makes use of existing local telephone infrastructure, and cable internet access makes use of cable television's existing cable infrastructure. Pg 41 image. In a optical fiber network, optical signals are converted to electrical signals, which can be interpreted as digital data (bits). 
 
-[PG 45 - top - Access Networks]
+**Physical media**
+
+Examples: fiber cable, coaxial cable, copper wire, radio spectrum for WIFI or satellite radio spectrum, and more. Bits are sent by propagating **electromagnetic waves or optical pulses** across one of these physical media. Transmitter-receiver pairs along the network translate these "waves" or "pulses" into bits/data.
+
+Different medias **guided media** vs **unguided media**. "With guided media, the waves are guided along a solid medium, such as a fiber-optic cable, a twisted-pair copper wire, or a coaxial cable. With unguided media, the waves propagate in the atmosphere and in outer space, such as in a wireless LAN or a digital satellite channel." For more specifics see page 46.
+
+An optical fiber is a thin, flexible medium that conducts pulses of light, with each pulse representing a bit. A single optical fiber can support tremendous bit rates, up to tens or even hundreds of gigabits per second. They are immune to electromagnetic interference and have very low signal attenuation up to 100 kilometers, so they are good for long distance data transfer. 
+
+**To learn more about: the physics behind the electromagnetic spectrum/ physics for networking?**
+
+[Pg 49 TOP 1.3 The Network Core] 
 
 ....
 
