@@ -54,9 +54,16 @@ An optical fiber is a thin, flexible medium that conducts pulses of light, with 
 
 **To learn more about: the physics behind the electromagnetic spectrum/ physics for networking?**
 
-[Pg 49 TOP 1.3 The Network Core] 
+#### 1.3 The Network Core
 
-....
+In a network application, end systems exchange messages with each other. Messages perform a "control" function (i.e establishing a connection) or can contain data, like an email message or image file. Messages are broken up into **packets** that travel along packet switches. A **router**'s job is to "switch" an inoming packet into an outbound link. 
+
+Each router in the link has a **forwarding table** that maps destination addresses to that router's outbound links. The internet router examines the IP address of a packet and maps this address to the outbound link according to the forwarding table. 
+
+In a circuit switching network approach the switches on the path between end systems maintain a constant connection while sending/receiving data. This is different from packet switching, where packets might be queued up based on traffic in the system. Traditional telephone networks are circuit-switched networks. A connection is called a **circuit**.
+
+[Pg 57 - TOP - Packet switching vs circuit switching]
+
 
 ## Approach 
 
