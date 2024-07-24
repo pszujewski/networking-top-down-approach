@@ -56,13 +56,23 @@ An optical fiber is a thin, flexible medium that conducts pulses of light, with 
 
 #### 1.3 The Network Core
 
-In a network application, end systems exchange messages with each other. Messages perform a "control" function (i.e establishing a connection) or can contain data, like an email message or image file. Messages are broken up into **packets** that travel along packet switches. A **router**'s job is to "switch" an inoming packet into an outbound link. 
+In a network application, end systems exchange messages with each other. Messages perform a "control" function (i.e establishing a connection) or can contain data, like an email message or image file. Messages are broken up into **packets** that travel along packet switches. A **router**'s job is to "switch" an incoming packet into an outbound link. 
 
 Each router in the link has a **forwarding table** that maps destination addresses to that router's outbound links. The internet router examines the IP address of a packet and maps this address to the outbound link according to the forwarding table. 
 
-In a circuit switching network approach the switches on the path between end systems maintain a constant connection while sending/receiving data. This is different from packet switching, where packets might be queued up based on traffic in the system. Traditional telephone networks are circuit-switched networks. A connection is called a **circuit**.
+In a circuit switching network approach the switches on the path between end systems maintain a constant connection while sending/receiving data. This is different from packet switching, where packets might be queued up based on traffic in the system. Traditional telephone networks are circuit-switched networks. A connection is called a **circuit**. Telecom networks are largely migrating towards packet switching. 
 
-[Pg 57 - TOP - Packet switching vs circuit switching]
+End systems access the internet via an **access ISP**, which in turn exchanges packets with a regional and tier-1 ISP across the globe if necessary. 
+
+#### Protocol Layers and their Service Models
+
+A layered architecture allows us to discuss a well-defined, specific part of a lage and complex system. Network designers organize protocols (and the hardware and software that implements the protocol) in **layers**. Each protocol belongs to one of the layers. Some common aplication layer protocols include HTTP (which provides for web document request and transfer), SMTP (which provides for the transfer of e-mail messages) and FTP (which provides for the transfer of files between two end systems). Application layer protocols are implemented in end systems. The internet's transport layer transports application-layer **messages** between application **endpoints**. TCP and UDP are 2 internet transport protocols.
+
+End systems implement all protocol layers, which is consistent with the view that the Internet architecture puts much of its complexity at the edges of the network. 
+
+At each layer, a packet has two types of fields: a header field and a pyaload field. The paylod is typically the packet from the layer above.
+
+[Pg. 83 - 1.6 Networks under attack]
 
 
 ## Approach 
