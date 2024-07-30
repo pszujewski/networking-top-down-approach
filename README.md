@@ -72,8 +72,13 @@ End systems implement all protocol layers, which is consistent with the view tha
 
 At each layer, a packet has two types of fields: a header field and a pyaload field. The paylod is typically the packet from the layer above.
 
-[Pg. 83 - 1.6 Networks under attack]
+## Chapter 2: Application Layer
 
+Programs that run on different end systems and communicate with each other over the network. You do not need to write software that runs on network-core devices, such as routers or link-layer switches. 
+
+In client-server architecture, ther is an always-on host, called the server, which services requests from many other hosts, called clients. 
+
+[p. 119]
 
 ## Approach 
 
@@ -83,6 +88,8 @@ Use 7th edition text book pdf and watch youtube lectures based on the 8th editio
 
 Rent e-text book for 4 months
 https://www.pearson.com/en-us/subject-catalog/p/computer-networking/P200000003334/9780135928615
+
+https://www.pearsonhighered.com/cs-resources
 
 https://media.pearsoncmg.com/aw/ecs_kurose_compnetwork_7/cw/
 
