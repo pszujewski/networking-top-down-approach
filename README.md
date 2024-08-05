@@ -76,9 +76,13 @@ At each layer, a packet has two types of fields: a header field and a pyaload fi
 
 Programs that run on different end systems and communicate with each other over the network. You do not need to write software that runs on network-core devices, such as routers or link-layer switches. 
 
-In client-server architecture, ther is an always-on host, called the server, which services requests from many other hosts, called clients. 
+In client-server architecture, ther is an always-on host, called the server, which services requests from many other hosts, called clients. Most applications consist of pairs of communicating processes (client and server processes). A process sends messages into, and receiveds messages from, the network through a software interface called a **socket**, which is the interface between the application layer and the transport layer within a host. It is also referred to as the API between the application and the network.
 
-[p. 119]
+To identify the process that is supposed to receive a message, 2 pieces of info need to be specified: 1) the address of the host and 2) an identifier that specifies the receiving process (or socket a process is "attached" to) in the destination host. 1 is the IP address and 2 is the port number. A host could be running many network applications at once. 
+
+A a transport protocol can provide an application with one or more security services. For example, in the sending host, a transport protocol can encrypt all data transmitted by the sending process, and in the receiving host
+
+[p. 123 - middle - 2.1.4 Transport Services Provided by the Internet]
 
 ## Approach 
 
