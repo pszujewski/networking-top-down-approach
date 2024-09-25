@@ -158,9 +158,43 @@ So you might register the following DNS records with a registrar:
 (networkutopia.com, dns1.networkutopia.com, NS)
 (dns1.networkutopia.com, 212.212.212.1, A)
 ```
+### Video Streaming
 
+Accounts for majority of residential ISP traffic in North America. A video is a sequence of images being displayed at a constant rate, for example, at 24 or 30 images per second. An uncompressed, digitally encoded image consists of an array of pixels, with each pixel encoded into a number of bits to represent luminance and color. Video can be compressed, thereby trading off video quality with bit rate. In HTTP streaming, an HTTP server "streams" the compressed video file bytes to clients. The clients collect the bytes in a client application buffer. 
 
-[p. 175 Top - 2.5 Peer..]
+CDNs are leveraged to distribute video content, so that the same bytes of video are not pushed constantly into the network in particular, costing the video company money. A CDN manages servers in multiple geographically distributed locations, stores copies of the videos (and other web content), and attempts to direct each user request to a CDN location that will provide the best user experience. 
+
+CDNs take advantage of DNS to intercept and redirect HTTP requests. For example, a video distribution site might use DNS and a private CDN company to redirect traffic for `https://video.mycompany.com/123456` to `https://67899.cdncompany.com` by having these requests resolve in DNS to the CDN company's DNS servers. The CDN company and its servers then handle requesting and caching and load balancing between its own servers in the distribution of the video company's videos. 
+
+CDNs are composed of "clusters" and employ **cluster selection strategy** algorithms to distribute web content and manage traffic or caches. CDNs select the appropriate cluster to direct user traffic to based on the user's IP address. 
+
+DASH HTTP (Dynamic Adaptive Streaming over HTTP) allows the client to request a "chunk" (of bytes, fixed length) of, for example, a movie. The client can dynamically measure received throughput and runs a rate-determintion algorithm to determine the quality of the next chunk to request. Chunks can be requested from different versions of a video based on throughput. 
+
+## Socket Programming
+
+TCP is connection-oriented and provides a reliable byte-stream channel through which data flow between 2 end systems. UDP is connection-less and sends independent packets of data from one end system to another without any guarantees about delivery.
+
+"Open" protocols are very well defined and even "assign" or are known to use a well known port number. Because a destination host is probably running many network application processes, each with one or more sockets, it is also necessary to identify the particular socket in the destination host. So the "destination address" includes, the host IP address and port number. 
+
+**Socket Programming with TCP**
+
+Because TCP is a "connection"-based approach, the client process sends a "connection" request to the TCP "welcoming" socket. Once the connection is established a separate dedicated socket/port is opened for that client by which bytes are streamed back and forth. The result of a successfull connection is a dedicated `connectionSocket` for a given client process.
+
+## Chapter 3 Transport Layer
+
+This is between the application layer and the network layer. It provides communication services to the application processes running on the hosts. How can 2 entities communicate reliably over a medium that may lose or corrupt data?
+
+Transport layer protocols are implemented in the end systems but not in network routers. The transport layer converts application-layer messages into transpot-leyer packets, known as **segments**. Messages are broken into smaller chunks and transport-layer headers are added to each chunk to create the "segment." This segment is then passed on to the network layer. In the network layer, segments are encapsulated within a network-layer packet called a **datagram** and sent on. 
+
+Network routers act only on the network-layer fields of the datagram. They do not examine transport-layer fields. The internet's network-layer protocol is **IP** (Internet Protocol). It is a **best-effort delivery service**, making its best effort to deliver segments between hosts. TCP and UDP extend IP's delivery service between 2 end systems (hosts) into a delivery service between 2 processes running on the end systems. Thus **the transport layer extends IP delivery from host-to-host to process-to-process**. UDP and TCP also include error checking.
+
+TCP (Transmission Control Protocol) and UDP (User Datagram Protocol) are both transport-layer protocols. **Transport-layer protocols provide logical communication between processes running on different hosts, whereas network-layer protocols provide logical communication between the hosts**. 
+
+Transpot layer protocols provide logical rather than physical communication. Transport-layer protocols are implemented and run in the end systems (hosts) only. However, a transport protocol can still offer reliable data transfer even when the network layer is unreliable (loses packets). A transport protocol can also encrypt packets even when network layer services can not offer such a service. 
+
+TCP provides reliable data transfer usin flow control, sequence numbers, acknowledgements and timers. All this is implemented in hosts, and makes unreliable IP data transfer "reliable".
+
+[p. 230 TOP]
 
 ## Approach 
 
